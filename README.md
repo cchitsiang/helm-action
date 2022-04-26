@@ -80,7 +80,7 @@ Use the output of your command in later steps
 Create a GitHub Secret for each of the following values:
 
 * `KUBE_CONFIG_DATA`
-Your kube config file in base64-encrypted form. You can do that with
+Your kube config file in base64-encoded form. You can do that with
 
 ```
 cat $HOME/.kube/config | base64
