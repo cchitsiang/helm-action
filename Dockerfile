@@ -13,5 +13,8 @@ RUN chmod +x /usr/bin/aws-iam-authenticator
 RUN wget https://get.helm.sh/helm-v3.8.0-linux-amd64.tar.gz -O - | tar -xzO linux-amd64/helm > /usr/local/bin/helm
 RUN chmod +x /usr/local/bin/helm
 
+RUN wget -qO- https://github.com/mozilla/sops/releases/download/v3.7.1/sops-v3.7.1.linux > /usr/local/bin/sops
+RUN chmod +x /usr/local/bin/sops
+
 COPY entrypoint.sh /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]:
