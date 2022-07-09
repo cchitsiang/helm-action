@@ -12,8 +12,12 @@ then
 
     for plugin in $plugins
     do
-        echo "installing helm plugin: [$plugin]"
-        helm plugin install $plugin
+        # check if helm plugin already installed and if not, install it
+        if ! helm plugin list | grep -q $plugin
+        then
+            echo "installing helm plugin: [$plugin]"
+            helm plugin install $plugin
+        fi
     done
 fi
 
