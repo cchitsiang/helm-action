@@ -24,7 +24,7 @@ fi
 if [[ -n "$INPUT_GPG_PRIVATE_KEY" ]]
 then
     echo "importing GPG private key"
-    echo "INPUT_GPG_PRIVATE_KEY" | gpg --import
+    echo "$INPUT_GPG_PRIVATE_KEY" | gpg --import
 fi
 
 echo "running entrypoint command(s)"
