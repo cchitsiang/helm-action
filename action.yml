@@ -4,6 +4,9 @@ branding:
   icon: 'anchor'  
   color: 'blue'
 inputs:
+  gpg_private_key:
+    description: 'GPG private key exported as an ASCII armored version'
+    required: false
   command:
     description: "Your command (kubectl or helm)"
     required: true
